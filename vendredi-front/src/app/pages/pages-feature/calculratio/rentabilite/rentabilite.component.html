@@ -1,0 +1,45 @@
+ 
+<div class="container  my-4 bg-light">
+   
+    <!-- Pills navs --> 
+    
+    <!-- Pills content -->
+    <div class="tab-content">
+  <div role="tabpanel" aria-labelledby="tab-register">
+      <form>
+        <div class="row">
+        <div class="form-outline mb-4 col-md-6">
+          <input type="number" id="resultatNet" class="form-control" name="rn" [(ngModel)]="rn" />
+          <label class="form-label" for="resultatNet">resultatNet</label>
+        </div>
+        
+        <div class="form-outline mb-4 col-md-6">
+          <input type="number" id="CA" class="form-control"  name="ca" [(ngModel)]="ca"/>
+          <label class="form-label" for="CA">Chiffre d'Affaires</label>
+        </div>
+      </div>
+        <div class="row">
+        <div class="form-outline mb-4 col-md-6">
+            <input type="number" id="EBE" class="form-control"  name="ebe" [(ngModel)]="ebe" />
+            <label class="form-label" for="EBE">EBE</label>
+          </div>    
+        
+          <div class="form-outline mb-4 col-md-6">
+            <input type="number" id="CP" class="form-control"  name="cp" [(ngModel)]="cp"/>
+            <label class="form-label" for="CP">capitaux propres</label>
+          </div> 
+        </div>
+
+        <div class="container d-flex justify-content-end">
+        <button type="submit" (click)="calcul()" class="btn btn-primary btn-block mx-4 p-3 fs-6 fw-bold ">Calcul</button>
+          
+        </div>
+        
+      <p><button type="submit"  class="btn btn-secondary btn-block mb-4 mx-2">calcul par rapport NET 1 :{{cal}}</button></p>  
+      <p><button type="submit"  class="btn btn-secondary btn-block mb-4 mx-2">calcul par rapport NET 2 :{{cal1}}</button></p>  
+      <p> <button type="submit"  class="btn btn-secondary btn-block mb-4 mx-2">calcul par rapport NET 3 :{{cal2}}</button></p> 
+
+      </form>
+    </div>
+    </div>
+  </div>

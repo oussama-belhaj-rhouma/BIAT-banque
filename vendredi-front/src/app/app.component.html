@@ -1,0 +1,38 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand d-flex justify-content-center mx-3" routerLink="/">
+      <img src="../../../assets/image/biat.png" width="75" height="75" alt="">
+      <span style="margin-top: 10px;" class="h1 mx-5 justify-content-center">
+        <p class="blue d-inline">BIAT </p>
+        <p class="orange d-inline">Audit</p>
+      </span>
+    </a>
+
+
+  </nav>
+  <div class="text-center h1 my-3">Bienvenue à  <p class="blue d-inline">BIAT </p>
+    <p class="orange d-inline">Audit</p></div>
+  <router-outlet></router-outlet>
+<br>
+<br>
+<br>
+<br>
+<app-footer class="fixed-bottom"></app-footer>
+
+<!--modal-->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{username}} vous ètes sur de quitter la page ?</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        <button type="button" class="btn btn-danger"  data-bs-dismiss="modal" (click)="logout()">Oui</button>
+      </div>
+    </div>
+  </div>
+</div>
+

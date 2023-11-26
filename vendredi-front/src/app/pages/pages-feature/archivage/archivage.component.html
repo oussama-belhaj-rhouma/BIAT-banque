@@ -1,0 +1,115 @@
+<button  class="btn d-flex justify-content-end p-3 m-4 fs-5 position-absolute top-0 end-0" style="background-color: rgba(237, 67, 67, 0.955);"
+data-bs-toggle="modal" data-bs-target="#modal1">Log Out</button>
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"> vous ètes sur de quitter la page ?</h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-danger"  data-bs-dismiss="modal" (click)="logout()">Oui</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="container border border-light my-4 bg-light">
+  <!-- Pills navs -->
+  <ul class="nav nav-pills justify-content-center mb-5" id="ex1" role="tablist">
+    <li class="nav-item px-4" role="presentation">
+      <a class="nav-link px-5" id="tab-vurapport" data-toggle="pill" role="tab" aria-controls="pills-vurapport"
+        aria-selected="false" routerLink="/vurapport">VuRapport</a>
+    </li>
+    <li class="nav-item px-4" role="presentation">
+      <a class="nav-link  px-5" id="tab-archivage" data-toggle="pill" role="tab"
+        style="background-color: rgba(174, 173, 173, 0.993);" aria-controls="pills-archivage" aria-selected="true"
+        routerLink="/archivage">Archivage</a>
+    </li>
+    <li class="nav-item  px-4" role="presentation">
+      <a class="nav-link px-5" id="tab-identification" data-toggle="pill" role="tab"
+        aria-controls="pills-identification" aria-selected="false" routerLink="/identification">Identification</a>
+    </li>
+    <li class="nav-item px-4" role="presentation">
+      <a class="nav-link px-5" id="tab-calculratio" data-toggle="pill" role="tab" aria-controls="pills-calculratio"
+        aria-selected="false" routerLink="/calculratio">CalculRatio</a>
+    </li>
+  </ul>
+
+  <form name="form" (submit)="onSubmit()" enctype="multipart/form-data" novalidate>
+    <div class="row">
+
+      <div class="form-outline mb-4 col-md-6">
+        <label class="form-label" for="loginName">Nom de l'agent</label>
+
+        <input type="text" class="form-control" name="nomAgent" [(ngModel)]="attributes.nomAgent" required
+          #nomAgent="ngModel" />
+
+      </div>
+
+      <div class="form-outline mb-4 col-md-6">
+        <label class="form-label" for="loginPassword">Localisation</label>
+
+        <input type="text" class="form-control" name="localisation" [(ngModel)]="attributes.localisation" disabled readonly
+          #localisation="ngModel" [value]="localisation1" />
+
+
+      </div>
+
+
+    </div>
+    <div class="row">
+
+      <div class="form-outline mb-4 col-md-6">
+        <label class="form-label" for="loginPassword">Année</label>
+
+        <input type="text" class="form-control" name="annee" [(ngModel)]="attributes.annee" required #annee="ngModel" />
+
+      </div>
+
+      <div class="form-outline mb-4 col-md-6">
+        <label class="form-label" for="loginPassword">l'ID de la mission</label>
+
+        <input type="text" class="form-control" name="missionId" [(ngModel)]="attributes.missionId" required
+          #missionId="ngModel" />
+
+      </div>
+
+    </div>
+    <div class="row">
+    <div class="col-md-6 form-outline mb-4 ">
+     
+        <label class="form-label" for="localisation">Type</label>
+        <select class="form-select" [(ngModel)]="attributes.type" name="type" #type="ngModel" required >
+          <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+        </select>
+
+
+    </div>
+    <div class="col-md-6" style="margin-top: 29px;">
+      <label class="custom-file-label" for="fileInput">{{ selectedFileName }}</label>
+      <input
+        type="file"
+        id="fileInput"
+        class="custom-file-input"
+        (change)="onFileSelected($event)"
+        name="file"
+        [(ngModel)]="selectedFile"
+        #file="ngModel"
+        accept=".pdf"
+      >
+    </div>
+  </div>
+      <div class="container text-center">
+        <button type="submit" class="btn btn-primary btn-lg" [disabled]="!nomAgent.valid || !annee.valid || !missionId.valid || !type.valid ">Ajouter un attributes</button>
+      </div>
+      <div class="alert alert-success" *ngIf="rapportAjoutee && isTrue">
+
+        Le rapport a été ajouté
+      </div>
+
+  </form>
+
+</div>

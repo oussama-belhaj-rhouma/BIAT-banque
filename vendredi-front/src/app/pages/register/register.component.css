@@ -1,0 +1,32 @@
+.container {
+    max-width: 500px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding for spacing */
+  }
+  
+  .tab-content {
+    text-align: center; /* Center the tab content */
+  }
+  
+  /* Style the forms */
+  form {
+    width: 100%; /* Make the form width 100% of its container */
+    max-width: 400px; /* Set the maximum width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+  }
+  
+  /* Optionally, you can add some margin at the bottom of the forms for spacing */
+  form {
+    margin-bottom: 20px;
+  }
+  
+  .nav-pills{
+    margin-bottom: 200px;
+  }
+  .blue
+{
+    color: rgb(0, 69, 121)
+}
+.orange{
+    color: rgb(244, 141, 2);
+}

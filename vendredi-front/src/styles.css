@@ -1,0 +1,50 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set the minimum height of the body to 100% of viewport height */
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Custom CSS for the good-looking label and input */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: rgb(0, 69, 121);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}

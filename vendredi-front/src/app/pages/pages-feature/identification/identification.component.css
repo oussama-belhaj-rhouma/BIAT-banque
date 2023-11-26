@@ -1,0 +1,61 @@
+/* Add some spacing and styling to the pills navigation container */
+.container {
+  padding: 20px;
+}
+
+/* Style for the pills navigation links */
+.nav-pills .nav-link {
+  color: #333;
+  background-color: #5a94cf;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 5px;
+  transition: background-color 0.2s ease;
+}
+
+/* Change the background color and text color of the active pill */
+.nav-pills .nav-link.active {
+  background-color: transparent;
+  color: transparent;
+}
+
+/* Hover effect for pills navigation links */
+.nav-pills .nav-link:hover {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+/* Adjust the spacing between pills on smaller screens */
+@media (max-width: 576px) {
+  .nav-pills .nav-link {
+    margin: 3px;
+  }
+}
+.blue
+{
+    color: rgb(0, 69, 121)
+}
+.orange{
+    color: rgb(244, 141, 2);
+}
+/* Exemple de style pour la barre de recherche */
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #f0e88e;
+  color: #0c0c0c;
+  border: none;
+  cursor: pointer;
+  position: center;
+}
+
+/* Exemple de style pour les résultats de recherche */
+#searchResults {
+  margin-top: 10px;
+  font-size: 18px;
+}

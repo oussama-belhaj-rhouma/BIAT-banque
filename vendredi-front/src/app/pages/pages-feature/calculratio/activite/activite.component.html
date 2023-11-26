@@ -1,0 +1,39 @@
+ 
+<div class="container my-4 bg-light">
+    
+    <!-- Pills navs -->
+    
+    <!-- Pills content -->
+    <div class="tab-content">
+  <div role="tabpanel" aria-labelledby="tab-register">
+      <form>
+        <div class="row">
+        <div class="form-outline mb-4 col-md-6">
+          <input type="number" id="registerCA" name="ca" class="form-control"[(ngModel)]="ca" />
+          <label class="form-label" for="registerCA">Chiffre d'Affaire</label>
+        </div>
+        
+        <!-- Username input -->
+        <div class="form-outline mb-4 col-md-6">
+          <input type="number" id="registernbr" name="nbr" class="form-control" [(ngModel)]="nbr" />
+          <label class="form-label" for="registernbr">nbr de clients sur annonce</label>
+        </div>
+      </div>
+      <div class="container d-flex justify-content-end">
+        <button type="submit" (click)="calcul()" class="btn btn-primary btn-block p-3 fs-6 fw-bold mx-4">Calcul</button>
+
+        </div>
+
+        <button type="submit"  class="btn btn-secondary btn-block mb-4">Calcul : {{cal}}</button>
+      </form>
+    </div>
+    </div>
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  

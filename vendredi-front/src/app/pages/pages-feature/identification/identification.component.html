@@ -1,0 +1,94 @@
+
+<button  class="btn d-flex justify-content-end p-3 m-4 fs-5 position-absolute top-0 end-0" style="background-color: rgba(237, 67, 67, 0.955);"
+data-bs-toggle="modal" data-bs-target="#modal1">Log Out</button>
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"> vous ètes sur de quitter la page ?</h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-danger"  data-bs-dismiss="modal" (click)="logout()">Oui</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container border border-light my-4 bg-light">
+    <!-- Pills navs -->
+    <ul class="nav nav-pills justify-content-center mb-5" id="ex1" role="tablist">
+      <li class="nav-item px-4" role="presentation">
+        <a class="nav-link px-5" id="tab-vurapport" data-toggle="pill" role="tab"
+           aria-controls="pills-vurapport" aria-selected="false" routerLink="/vurapport">VuRapport</a>
+      </li>
+      <li class="nav-item px-4" role="presentation">
+        <a class="nav-link  px-5" id="tab-archivage" data-toggle="pill" role="tab"
+           aria-controls="pills-archivage" aria-selected="true" routerLink="/archivage">Archivage</a>
+      </li>
+      <li class="nav-item  px-4" role="presentation">
+        <a class="nav-link px-5" id="tab-identification" data-toggle="pill" role="tab" style="background-color: rgba(174, 173, 173, 0.993);"
+           aria-controls="pills-identification" aria-selected="false" routerLink="/identification">Identification</a>
+      </li>
+      <li class="nav-item px-4" role="presentation">
+        <a class="nav-link px-5" id="tab-calculratio" data-toggle="pill" role="tab"
+           aria-controls="pills-calculratio" aria-selected="false" routerLink="/calculratio">CalculRatio</a>
+      </li>
+    </ul>
+ 
+ 
+    <div class="  d-flex justify-content-between  ">
+      <div class="col-auto mr-auto">
+        <button class="btn" (click)="getRapports()">Afficher tous les rapports</button>
+      </div>
+      <div class="col-auto ml-auto">
+        <input type="text" id="searchInput" [(ngModel)]="type"  placeholder="Entrez le type du rapport">
+        <button  (click)="searchReport()">Rechercher</button>
+      </div>
+
+      
+
+    </div>
+
+    
+
+   
+
+    <table class="table table-hover my-4 p-3 border">
+      <thead>
+        <tr>
+          <th scope="col">Type du rapport</th>
+          <th scope="col">Nom de l'agent</th>
+          <th scope="col">Localisation</th>
+          <th scope="col">Année</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let rapport of rapports">
+          <th scope="row">{{rapport.type}}</th>
+          <td>{{rapport.nomAgent}}</td>
+          <td>{{rapport.localisation}}</td>
+          <td>{{rapport.annee}}</td>
+        
+        </tr>
+        
+      </tbody>
+    </table>
+
+
+    </div>
+
+      
+
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal content for editing -->
+          <!-- Add your form or content here -->
+        </div>
+      </div>
+    </div>

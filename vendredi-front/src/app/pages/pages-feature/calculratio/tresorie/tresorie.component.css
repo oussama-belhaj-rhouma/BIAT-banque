@@ -1,0 +1,16 @@
+/* Position the "return" link at the bottom-left corner */
+.return-link {
+    position: fixed;
+    bottom: 80px; /* Adjust this value to set the vertical distance from the bottom */
+    left: 1330px; /* Adjust this value to set the horizontal distance from the left */
+    background-color: #efae3c; /* Optional styling for background color */
+    color: #fff; /* Optional styling for text color */
+    padding: 10px 15px; /* Optional padding for better appearance */
+    border-radius: 5px; /* Optional border-radius for rounded corners */
+    text-decoration: none; /* Optional to remove underline */
+  }
+  
+  /* Optional hover effect */
+  .return-link:hover {
+    background-color: #e9941d;
+  }

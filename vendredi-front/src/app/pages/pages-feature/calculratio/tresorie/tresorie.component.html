@@ -1,0 +1,44 @@
+<div class="container  my-4 bg-light">
+   
+    <!-- Pills navs -->
+    
+    <!-- Pills content -->
+    <div class="tab-content">
+  <div role="tabpanel" aria-labelledby="tab-register">
+      <form>
+        <div class="row">
+        <div class="form-outline mb-4 col-md-6">
+          <input type="number" id="TR" class="form-control" name="ta" [(ngModel)]="ta" />
+          <label class="form-label" for="TR">tresorie actif</label>
+        </div>
+        
+        <div class="form-outline mb-4 col-md-6">
+          <input type="number" id="TP" class="form-control" name="tp" [(ngModel)]="tp" />
+          <label class="form-label" for="TP">tresorie passif</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-outline mb-4 col-md-6">
+            <input type="number" id="venteTTC" class="form-control" name="tv" [(ngModel)]="tv"/>
+            <label class="form-label" for="venteTTC">totale des ventes ttc</label>
+          </div>    
+        
+          <div class="form-outline mb-4 col-md-6">
+            <input type="number" id="clientTTC" class="form-control" name="cc" [(ngModel)]="cc"/>
+            <label class="form-label" for="clientTTC">creances cltients ttc</label>
+          </div> 
+        </div>
+        <div class="container d-flex justify-content-end">
+          <button type="submit" (click)="calcul()" class="btn btn-primary btn-block p-3 fs-6 fw-bold mx-4">Calcul</button>
+  
+          </div>
+<p>        <button type="submit" class="btn btn-secondary btn-block mb-4">Tresorie nette : {{cal}}</button>
+</p>       <p> <button type="submit" class="btn btn-secondary btn-block mb-4"> delai moyen de reglements des clients en jours : {{cal1}}</button>
+</p>     
+          
+      </form>
+    </div>
+    </div>
+  
+  </div>
+  

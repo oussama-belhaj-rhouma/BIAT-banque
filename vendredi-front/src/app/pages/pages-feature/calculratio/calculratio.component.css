@@ -1,0 +1,45 @@
+/* Add some spacing and styling to the pills navigation container */
+.container {
+  padding: 20px;
+}
+
+/* Style for the pills navigation links */
+.nav-pills .nav-link {
+  color: #333;
+  background-color: #5a94cf;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 5px;
+  transition: background-color 0.2s ease;
+}
+
+/* Change the background color and text color of the active pill */
+.nav-pills .nav-link.active {
+  background-color: transparent;
+  color: transparent;
+}
+
+/* Hover effect for pills navigation links */
+.nav-pills .nav-link:hover {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+/* Adjust the spacing between pills on smaller screens */
+@media (max-width: 576px) {
+  .nav-pills .nav-link {
+    margin: 3px;
+  }
+}
+.blue
+{
+    color: rgb(0, 69, 121)
+}
+.orange{
+    color: rgb(244, 141, 2);
+}
+.active-link {
+  background-color: #007bff; /* Customize the active link background color */
+  color: #fff; /* Customize the active link text color */
+  border-color: #007bff; /* Customize the active link border color */
+}

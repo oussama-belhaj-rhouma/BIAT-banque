@@ -1,0 +1,12 @@
+
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand d-flex justify-content-center" href="home">
+    <img src="../../../assets/image/biat.png" width="75" height="75" alt="">
+    <span style="margin-top: 10px;" class="h1 mx-5 justify-content-center">
+      <p class="blue d-inline">BIAT </p>
+      <p class="orange d-inline">Audit</p>
+    </span>
+  </a>
+  <button *ngIf="isLoggedIn" (click)="logout()" class="btn btn-secondary d-flex justify-content-end mx-4">log out</button>
+
+</nav>

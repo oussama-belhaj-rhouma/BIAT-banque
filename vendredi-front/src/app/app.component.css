@@ -1,0 +1,91 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #aecff1b1; /* Set the background color to blue */
+}
+
+.centered-title {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.button-container {
+  display: flex;
+  align-items:center; /* Align items at the center horizontally */
+
+  flex-direction: column; /* Change to column to stack the buttons and the bottom box vertically */
+  margin-bottom: 150px; /* Add some spacing between the buttons and the bottom box */
+}
+
+.login-button,
+.signin-button {
+  padding: 10px 10px;
+  margin: 1px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border:0cqh;
+}
+
+.signin-button {
+  background-color: #28a745;
+ 
+}
+
+.bottom-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 20px;
+}
+.container {
+  max-width: 500px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add some padding for spacing */
+}
+
+.tab-content {
+  text-align: center; /* Center the tab content */
+}
+
+/* Style the forms */
+form {
+  width: 100%; /* Make the form width 100% of its container */
+  max-width: 400px; /* Set the maximum width of the form */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+/* Optionally, you can add some margin at the bottom of the forms for spacing */
+form {
+  margin-bottom: 20px;
+}
+.blue
+{
+  color: rgb(0, 69, 121)
+}
+.orange{
+  color: rgb(244, 141, 2);
+}
+
+/* Custom CSS for the good-looking label and input */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+
